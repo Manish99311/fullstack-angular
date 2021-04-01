@@ -18,11 +18,19 @@ a {
   text-decoration: none;
   cursor: pointer;
 }
-
+nav {
+  margin-bottom: 70px;
+}
 .nav-center {
-  // padding: 1em;
   background: #eeeeee;
   width: 100%;
+  position: fixed;
+  top: 0;
+}
+
+.nav-center-scroll {
+  background: #fff;
+  box-shadow: 0 3px 12px 0 rgba(0,0,0,.08);
 }
 
 .nav-header {

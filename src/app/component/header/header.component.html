@@ -1,7 +1,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" />
 
 <nav>
-  <div class="nav-center">
+  <div class="nav-center" id="navbar">
     <!-- nav header -->
     <div class="nav-header">
       <h2 class="header-logo">Manish</h2>
@@ -11,42 +11,17 @@
     </div>
     <!-- links -->
     <ul class="links">
-      <li>
-        <a href="index.html">home</a>
-      </li>
-      <li>
-        <a href="about.html">about</a>
-      </li>
-      <li>
-        <a href="projects.html">projects</a>
-      </li>
-      <li>
-        <a href="contact.html">contact</a>
+      <li *ngFor="let header of navItems">
+        <a href="index.html">{{header.title}}</a>
       </li>
     </ul>
     <!-- social media -->
     <ul class="social-icons">
-      <li>
-        <a href="https://www.twitter.com">
-          <i class="fab fa-facebook"></i>
-        </a>
-      </li>
-      <li>
-        <a href="https://www.twitter.com">
-          <i class="fab fa-twitter"></i>
-        </a>
-      </li>
-      <li>
-        <a href="https://www.twitter.com">
-          <i class="fab fa-github"></i>
-        </a>
-      </li>
-      <li>
-        <a href="https://www.twitter.com">
-          <i class="fab fa-linkedin"></i>
+      <li *ngFor="let icon of socialMediaItems">
+        <a href="{{icon.link}}">
+          <i class="{{icon.iconClass}}"></i>
         </a>
       </li>
     </ul>
   </div>
 </nav>
-
