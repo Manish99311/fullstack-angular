@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './component/header/header.component';
 import { HeaderBannerComponent } from './component/header-banner/header-banner.component';
 import { AboutComponent } from './component/about/about.component';
+import { SkillsComponent } from './component/skills/skills.component';
+import { FooterComponent } from './component/footer/footer.component';
 
 
 @NgModule({
@@ -13,7 +15,10 @@ import { AboutComponent } from './component/about/about.component';
     AppComponent,
     HeaderComponent,
     HeaderBannerComponent,
-    AboutComponent
+    AboutComponent,
+    SkillsComponent,
+    FooterComponent
+
   ],
   imports: [
     BrowserModule,

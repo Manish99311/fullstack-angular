@@ -12,6 +12,8 @@
   width:40%;
   transform: translateX(-20px);
   transition: 1.5s all ease-in-out;
+  position: relative;
+  z-index: -1;
 }
 .image-appear {
   opacity: 1;
@@ -42,4 +44,18 @@
 .about-container {
   margin-bottom: 50px;
   // margin-top: 30px;
+}
+@media only screen and (max-width: 600px){
+  .about-content {
+    flex-direction: column;
+  }
+  .about-image {
+    width:100%
+  }
+  .border {
+    margin: 30px 20px 1px 20px;
+  }
+  .about-text {
+    margin-top: 35px;
+  }
 }
