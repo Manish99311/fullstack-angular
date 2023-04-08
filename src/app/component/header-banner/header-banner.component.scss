@@ -6,6 +6,9 @@
 .men-image {
   width: 75%;
   padding-left: 13%;
+  animation: zoomIn 1s ease forwards;
+  animation-delay: 1.5s;
+  -webkit-animation-fill-mode: backwards;
 }
 .header-banner {
   margin-top: -2px;
@@ -18,33 +21,49 @@
   flex: 0 0 50%;
     padding-left: 10%;
     max-width: 50%;
+  
 }
 
-p {
-  font-size: 90%;
+.text-area h3 {
+  font-size: 21px;
+  font-weight: 700;
   letter-spacing: 1px;
   margin-bottom: 0.5rem !important;
   color:#303841;
+  animation: slideTop 1s ease forwards;
+  animation-delay: 0.7s;
+  -webkit-animation-fill-mode: backwards;
 }
 
-h2 {
+.text-area h2 {
   font-size: 3.5rem;
   font-weight: 600;
   letter-spacing: 2px;
   color:#303841;
+  animation: slideRight 1s ease forwards;
+  animation-delay: 0.7s;
+  -webkit-animation-fill-mode: backwards;
 }
 .profile {
-  font-size: 12px;
+  font-weight: 700;
+  font-size: 21px;
   letter-spacing: 0.5px;
   color:#303841;
+  animation: slideBottom 1s ease forwards;
+  animation-delay: 0.7s;
+  -webkit-animation-fill-mode: backwards;
 }
 .btn {
   border: 2px solid #303841;
-  width: 200px;
+  width: 150px;
   border-radius: 20px;
   color: white;
   background: #303841;
   margin-top: 3%;
+  transition: .5s ease;
+  animation: slideBottom 1s ease forwards;
+  animation-delay: 1.5s;
+  -webkit-animation-fill-mode: backwards;
 }
 
 .box {
@@ -70,6 +89,8 @@ h2 {
 .box span:nth-child(3){
   animation-delay: -0.4s;
 }
+
+// KEYFRAME ANIMATION
 @keyframes animate {
   0%{
     opacity: 0;
@@ -83,6 +104,51 @@ h2 {
     transform: rotate(45deg) translate(20px, 20px);
   }
 }
+
+@keyframes slideTop {
+  0%{
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+  100%{
+    opacity: 1;
+    transform: translateY(0);
+    z-index: -1;
+  }
+  }
+  @keyframes slideBottom {
+    0%{
+      opacity: 0;
+      transform: translateY(100px);
+    }
+    100%{
+      opacity: 1;
+      transform: translateY(0);
+    }
+    }
+    @keyframes slideRight {
+      0%{
+        opacity: 0;
+        transform: translateX(-100px);
+      }
+      100%{
+        opacity: 1;
+        transform: translateX(0);
+      }
+      }
+
+      @keyframes zoomIn {
+        0%{
+          opacity: 0;
+          transform: scale(0);
+        }
+        100%{
+          opacity: 1;
+          transform: scale(1);
+        }
+        }
+  
+
 @media only screen and (max-width: 600px) {
 .men-image {
   display: none;
@@ -93,18 +159,21 @@ h2 {
 }
 .profile {
   width: 216%;
-  font-size: 80%;
+  font-size: 100%;
 }
 h2{
-  font-size: 2.4rem;
+  font-size: 2.0rem;
   width: 220%;
   margin: 1px 0px 10px 0px;
 }
 .text-area {
   margin-top: 20%;
+  h3 {
+    font-size: 80%;
+  }
 }
 .banner {
-  height:330px
+  height:400px
 }
 .box {
   display: none;
