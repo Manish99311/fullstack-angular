@@ -1,0 +1,25 @@
+<nav>
+  <div class="nav-center" id="navbar">
+    <!-- nav header -->
+    <div class="nav-header">
+      <div class="header-logo">Manish</div>
+      <button class="nav-toggle">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+    <!-- links -->
+    <ul class="links">
+      <li *ngFor="let header of navItems">
+        <a href="{{header.link}}">{{header.title}}</a>
+      </li>
+    </ul>
+    <!-- social media -->
+    <ul class="social-icons">
+      <li *ngFor="let icon of socialMediaItems">
+        <a href="{{icon.link}}">
+          <i class="{{icon.iconClass}}"></i>
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>

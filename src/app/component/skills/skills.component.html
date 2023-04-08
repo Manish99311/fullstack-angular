@@ -1,0 +1,41 @@
+<div class="container">
+  <div class="title">
+    <h2>SKILLS</h2>
+  </div>
+  <div class="skill skill-frontend card">
+    <div class="card-content">
+      <h4 class="card-text-title light">FRONTEND</h4>
+      <div class="slider-animation">
+        <div class="technology">
+          <div *ngFor="let imageSource of FrontendImageArray">
+            <img class="tech-image" src="{{ imageSource.imageUrl }}" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="skill skill-frontend card">
+    <div class="card-content">
+      <h4 class="card-text-title light">BACKEND</h4>
+      <div class="slider-animation">
+        <div class="technology">
+          <div *ngFor="let imageSource of BackendImageArray">
+            <img class="tech-image" src="{{ imageSource.imageUrl }}" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="skill skill-frontend card">
+    <div class="card-content">
+      <h4 class="card-text-title light">OTHER</h4>
+      <div class="slider-animation">
+        <div class="technology">
+          <div *ngFor="let imageSource of OtherImageArray">
+            <img class="tech-image" src="{{ imageSource.imageUrl }}" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
